@@ -459,7 +459,6 @@ class CallingContext: NSObject {
     }
 }
 
-//extension CallingContext: CallDelegate {
 extension CallingContext: CallDelegate,
                           RecordingFeatureDelegate,
                           TranscriptionFeatureDelegate {
@@ -493,22 +492,6 @@ extension CallingContext: CallDelegate,
         updateDisplayedRemoteParticipants()
         notifyRemoteParticipantsUpdated()
     }
-
-//    func call(_ call: Call, didChangeRecordingState args: PropertyChangedEventArgs) {
-//        let newRecordingActive = call.isRecordingActive
-//        if newRecordingActive != isRecordingActive {
-//            isRecordingActive = newRecordingActive
-//            notifyOnRecordingActiveChangeUpdated()
-//        }
-//    }
-//
-//    func call(_ call: Call, didChangeTranscriptionState args: PropertyChangedEventArgs) {
-//        let newTranscriptionActive = call.isTranscriptionActive
-//        if newTranscriptionActive != isTranscriptionActive {
-//            isTranscriptionActive = newTranscriptionActive
-//            notifyOnTranscriptionActiveChangeUpdated()
-//        }
-//    }
 
     func recordingFeature(_ recordingFeature: RecordingFeature, didChangeRecordingState args: PropertyChangedEventArgs) {
         print("recording is called")
